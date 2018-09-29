@@ -27,7 +27,7 @@ MongoClient.connect(url, function(err, database) {
 });
 
 app.get('/', function(req,res) {
-  res.render('index')
+//  res.render('index')
 });
 
 app.post('/userDetails', function(req,res) {
