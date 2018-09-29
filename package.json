@@ -32,7 +32,6 @@
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0",
         "ejs":"2.6.1",
-        "popper":"1.14.3"
     },
     "devDependencies": {
         "browser-sync": "2.24.7",
