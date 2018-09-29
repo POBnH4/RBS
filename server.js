@@ -17,7 +17,11 @@ const PASSWORD_VALIDITY = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,2
  app.get('/', function(req, res){
  res.send("Hello world! by express");
 });
-app.listen(8080);
+
+http.createServer(function (req, res) {
+ res.writeHead(200, {'Content-Type': 'text/html'});
+ res.end('Hello World!');
+}).listen(8080);
 var db;
 
 MongoClient.connect(url, function(err, database) {
