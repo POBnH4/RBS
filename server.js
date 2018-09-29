@@ -17,7 +17,6 @@ app.use(session({ secret: 'example'}));
 app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine', 'ejs');
 
-
 var db;
 
 MongoClient.connect(url, function(err, database) {
