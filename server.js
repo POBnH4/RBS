@@ -13,8 +13,6 @@ const PASSWORD_VALIDITY = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,2
 // one uppercase letter, one digit, and be between 8 and 20 characters;
 
 // ----- - - - - - - - - - LOGIN --- - - - - - - -- - - - --  - --
-var express = require('express');
-var app = express();
  app.use(express.static('public'))
  app.get('/', function(req, res){
  res.send("Hello world! by express");
