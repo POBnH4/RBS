@@ -106,7 +106,6 @@ app.post('/userDetails', function(req,res) {
     });
 });
 
-
 //- - - - - -  -- - - -  - -LOGOUT - - -- - - - -- - - - - - -
 
 app.get('/logout', function(req,res){
@@ -120,27 +119,10 @@ app.get('/logout', function(req,res){
   req.session.loggedin = false;
   req.session.destroy();
   res.redirect('/')
-});
-
-var db;
-
-MongoClient.connect(url, function(err, database) {
-  if (err) throw err;
-  db = database;
-  app.listen(8080);
-  console.log('listening....');
 });
 
 app.get('/', function(req,res) {
-  res.render('pages/index')
+  res.render('')
 });
-//tell express to use sessions
-app.use(session({secret: 'example'}));
-
-
-// Node.js body parsing middleware
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 
 //- - - - - - - - - - -  Get the modal - - - - - - - -   - - - - - - - - - - - -
